@@ -1,0 +1,18 @@
+:root{
+  /* Calybrate theme: Indigo #493D9E · Lavender #B2A5FF */
+  --blue-900:#1f1a47; --blue-800:#362d7a; --blue-700:#493D9E; --blue-600:#5e52b5; --blue-500:#7d72c9;
+  --blue-400:#a59ddd; --blue-300:#cbc6ee; --blue-200:#e0ddf5; --blue-100:#eeecf9; --blue-50:#f7f6fc;
+  --green-900:#31277e; --green-800:#4d3fb0; --green-700:#6a5bd6; --green-600:#8f80f0; --green-500:#B2A5FF;
+  --green-300:#d3cbff; --green-200:#e5e0ff; --green-100:#f0edff; --green-50:#f8f6ff;
+  --ink:#171717; --ink-2:#404040; --ink-3:#737373; --line:#7d72c9; --white:#fff; --rgb:73,61,158;
+  --shadow-1:0 1px 2px rgba(var(--rgb),.08), 0 1px 1px rgba(var(--rgb),.05);
+  --shadow-2:0 6px 18px rgba(var(--rgb),.14), 0 2px 4px rgba(var(--rgb),.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:Arial,Helvetica,"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;color:var(--ink);background:#fff;font-size:14px;line-height:1.35;-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;cursor:pointer}
+
+.view-in{animation:viewIn .22s ease}
+@media (prefers-reduced-motion:reduce){.view-in{animation:none}}
+.view-error{margin:32px auto;max-width:560px;padding:16px 18px;border-radius:12px;background:#FDECEA;color:#8a2b0f}

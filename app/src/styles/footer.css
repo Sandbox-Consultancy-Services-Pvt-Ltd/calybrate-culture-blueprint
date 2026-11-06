@@ -1,0 +1,20 @@
+footer{max-width:none;margin:26px auto 0;padding:22px 24px 36px;border-top:1px solid var(--blue-100);display:flex;justify-content:space-between;align-items:center;gap:16px 24px;flex-wrap:wrap;color:var(--ink-3);font-size:12px;background:linear-gradient(180deg,transparent,var(--blue-50))}
+footer b{color:var(--blue-800)}
+.ft-l{display:flex;align-items:center;gap:14px;min-width:0}
+.ft-logo{width:44px;height:44px;object-fit:contain;flex:none}
+.ft-text{display:flex;flex-direction:column;gap:2px;min-width:0}
+.ft-brand{font-size:15px}.ft-brand b{color:var(--blue-900);font-weight:700;letter-spacing:-.01em}
+.ft-sys{font-size:12.5px;color:var(--ink-2,var(--ink-3))}
+.ft-meta{margin-top:3px;padding-top:4px;border-top:1px dashed var(--blue-100);font-size:11.5px;letter-spacing:.02em}
+footer .copy{display:flex;flex-direction:column;align-items:flex-end;gap:3px;text-align:right}
+footer .copy-line{font-size:13px;font-weight:700;color:var(--blue-900)}
+footer .copy-co{font-weight:600;font-size:11.5px;letter-spacing:.08em;color:var(--ink-3)}
+@media screen and (max-width:640px){
+  footer{flex-direction:column;align-items:center;text-align:center;padding:20px 16px 28px}
+  .ft-l{flex-direction:column;gap:8px}.ft-text{align-items:center}
+  footer .copy{align-items:center;text-align:center;padding-top:12px;border-top:1px solid var(--blue-100);width:100%}
+}
+/* Footer always sits at the bottom: the app is a full-height column and <main> takes the spare room. */
+#root{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
+#root>main{flex:1 0 auto;width:100%}
+#root>footer{flex:none;width:100%;margin-top:26px}

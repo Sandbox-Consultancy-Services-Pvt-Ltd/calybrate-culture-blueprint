@@ -1,0 +1,23 @@
+/* Category themes. The default (Calybrate: purple + blue) lives in base.css; each block below swaps the two palettes.
+   --blue-* is the primary scale, --green-* is the accent scale (named for history; it is blue/gold now). */
+:root[data-theme="healthcare"]{
+  --blue-900:#00403a; --blue-800:#00594f; --blue-700:#00796b; --blue-600:#139486; --blue-500:#3fb0a2;
+  --blue-400:#7ccbc1; --blue-300:#b3e0da; --blue-200:#d3eeea; --blue-100:#e8f6f4; --blue-50:#f4fbfa;
+  --green-900:#0a3566; --green-800:#0f4c99; --green-700:#1a66c7; --green-600:#2b7fe0; --green-500:#47a1ff;
+  --green-300:#9fcbff; --green-200:#cfe4ff; --green-100:#e6f1ff; --green-50:#f3f8ff;
+  --line:#3fb0a2; --rgb:0,121,107;
+}
+:root[data-theme="engineering"]{
+  --blue-900:#5c2100; --blue-800:#8a3200; --blue-700:#b84300; --blue-600:#d6590f; --blue-500:#ee7a3a;
+  --blue-400:#f4a070; --blue-300:#f9c8a8; --blue-200:#fbdfcc; --blue-100:#fdeee3; --blue-50:#fff8f3;
+  --green-900:#0a3566; --green-800:#0f4c99; --green-700:#1a66c7; --green-600:#2b7fe0; --green-500:#47a1ff;
+  --green-300:#9fcbff; --green-200:#cfe4ff; --green-100:#e6f1ff; --green-50:#f3f8ff;
+  --line:#ee7a3a; --rgb:184,67,0;
+}
+:root[data-theme="banking"]{
+  --blue-900:#06301f; --blue-800:#0b4a31; --blue-700:#116b46; --blue-600:#1d8a5c; --blue-500:#4aa882;
+  --blue-400:#86c8ab; --blue-300:#b9e0cf; --blue-200:#d6ede3; --blue-100:#e8f6f0; --blue-50:#f4fbf8;
+  --green-900:#5c4300; --green-800:#805c00; --green-700:#a67800; --green-600:#c49100; --green-500:#e0ad1a;
+  --green-300:#f0d27a; --green-200:#f7e6ae; --green-100:#fbf3d4; --green-50:#fffaea;
+  --line:#4aa882; --rgb:17,107,70;
+}

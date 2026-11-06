@@ -1,0 +1,35 @@
+@keyframes viewIn{from{opacity:0}to{opacity:1}}
+.view-in{animation:viewIn .22s ease}
+@media (prefers-reduced-motion:reduce){.view-in{animation:none}}
+#printHead{display:none}
+@page{size:A4 landscape;margin:8mm}
+html.printing,html.printing body{background:#fff}
+html.printing *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+html.printing .topbar,html.printing .print-item,html.printing .zoom,html.printing .hero,html.printing .drawer,html.printing .toast,
+html.printing .ox-drawer,html.printing .ox-toast,html.printing .scrim,html.printing .oc-add,html.printing #dLegend,html.printing #ox-export,
+html.printing #viewMap .mt-btns,html.printing #viewMap .tray,html.printing #viewMap .seg{display:none!important}
+html.printing #printHead{display:flex;align-items:center;gap:12px;padding:0 0 6px;border-bottom:2px solid var(--blue-700);margin-bottom:8px}
+html.printing #printHead img{height:30px;width:auto}
+html.printing #printHead b{font-size:15px;color:var(--blue-900)}
+html.printing #printHead span{margin-left:auto;font-size:11px;color:var(--ink-3)}
+html.printing #viewDash,html.printing #viewCCT,html.printing #viewMap,html.printing #viewOutcomes{margin-left:auto;margin-right:auto}
+html.printing .section{padding:0;max-width:none}
+html.printing .sec-head{margin-bottom:8px}
+html.printing .sec-head h2{font-size:18px}
+html.printing .keyrow{margin-bottom:8px}
+html.printing .lc-scroll{overflow:visible;border:0;box-shadow:none}
+html.printing .lc-scaler{width:1880px!important;height:1212px!important;margin:0}
+html.printing .lc{transform:none!important}
+html.printing .edge.out{animation:none}
+html.printing #viewOutcomes .ox-main{gap:14px;padding-bottom:0}
+html.printing #viewOutcomes .area,html.printing #viewOutcomes .ox-area,html.printing #viewOutcomes .cell{break-inside:avoid}
+html.printing footer{margin:8px auto 0;padding:6px 0 0;font-size:10px;max-width:none}
+html.printing footer .ft-logo{width:24px;height:24px}html.printing footer{background:none}
+
+/* Viewers cannot print or save as PDF: the whole page is blank on paper. Set by Shell.tsx from the role. */
+@media print{html[data-no-print] body{display:none!important}}
+
+/* Watermark: hidden on screen, shown on printouts only */
+.wm{display:none;pointer-events:none}
+@media print{.wm{display:block;position:fixed;inset:0;z-index:2147483000}}
+html.printing .wm{display:block;position:fixed;inset:0;z-index:2147483000}

@@ -1,0 +1,102 @@
+<section class="hero">
+  <div class="hero-in">
+    <div>
+      <div class="eyebrow">Calybrate Blueprint</div>
+      <h1>The Safeguard Map</h1>
+      <p>Every value is guarded by practices, every practice is backed by SOPs, and anything that breaks them follows the zero-tolerance path.</p>
+    </div>
+    <div class="stats" aria-label="Summary">
+      <div class="stat"><b id="nVals">5</b><span>Values</span></div>
+      <div class="stat"><b id="nPrac">9</b><span>Practices</span></div>
+      <div class="stat"><b id="nSops">12</b><span>SOPs</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="map">
+  <div class="sec-head">
+    <div>
+      <h2>Safeguard Map <span class="tag">Purpose → Values → Practices → SOPs → Zero tolerance</span></h2>
+    </div>
+  </div>
+
+  <div class="mapbar" id="mapbar">
+    <button class="btn dock-tab" id="dockBtn" type="button" aria-pressed="true" aria-label="Show or hide the library" title="Show or hide the library">☰</button>
+    <div class="seg" role="tablist"><button id="vRings" class="on" role="tab">Rings</button><button id="vLinks" role="tab">Connections</button><button id="vPillars" role="tab">Pillars</button></div>
+    <button class="btn" id="bReplay" type="button" title="Play the grow-out animation again">▶ Replay</button>
+    <span class="savestate" id="saveState">Saved</span>
+    <span class="spacer"></span>
+    <div class="pop-wrap">
+      <button class="btn gapbtn" id="gapBtn" type="button" aria-haspopup="true" aria-expanded="false" title="Coverage gaps">⚠ <span id="gapN">0</span> gaps</button>
+      <div class="pop gap-pop" id="gapPop" hidden><div class="cov" id="cov"></div></div>
+    </div>
+    <div class="pop-wrap">
+      <button class="btn" id="howBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="How to use" title="How to use">ⓘ</button>
+      <div class="pop how-pop" id="howPop" hidden>
+        <p><b>SOP library</b> — drag a block onto a practice. SOPs show on the ring only once placed. Dashed = not placed yet · ✓ = marked Done · green number = practices using it. Drop a placed SOP back on the library to unlink it.</p>
+        <p><b>Practice library</b> — drag a practice onto a value to link it; it appears on the ring once linked. Drop a practice back on the library to unlink it.</p>
+        <p><b>Values</b> — click a value, practice or SOP anywhere to trace its links and open its details panel, where you can tick links and mark SOPs Done.</p>
+      </div>
+    </div>
+    <div class="pop-wrap">
+      <button class="btn" id="mmBtn" type="button" aria-haspopup="true" aria-expanded="false">⋯ More</button>
+      <div class="pop" id="mmPop" hidden>
+        <button class="btn" id="bReset" type="button">Reset to default</button>
+        <button class="btn" id="bVer" type="button" hidden>Save version</button>
+        <button class="btn" id="bVerOpen" type="button" hidden>Saved versions…</button>
+      </div>
+    </div>
+    <button class="btn primary" id="bSave" type="button">Save</button>
+  </div>
+
+  <div class="mapbody" id="mapbody">
+    <aside class="dock" id="dock" aria-label="Library">
+      <div class="dock-h"><span>Library</span><button type="button" id="dockClose" aria-label="Hide library" title="Hide library">«</button></div>
+      <div class="dock-tabs" role="tablist">
+        <button type="button" role="tab" data-tab="sops" class="on">SOPs<i id="cSops"></i></button>
+        <button type="button" role="tab" data-tab="practices">Practices<i id="cPrac"></i></button>
+        <button type="button" role="tab" data-tab="values">Values<i id="cVals"></i></button>
+      </div>
+      <div class="dock-tools"><input type="search" id="dockSearch" placeholder="Search…" aria-label="Search the library"><label><input type="checkbox" id="dockGaps"> Only gaps</label></div>
+      <div class="dock-pane" data-pane="sops">
+        <button type="button" class="dock-add" data-add="sop" hidden>+ Add SOP</button>
+        <div class="tray" id="tray" data-drop="tray">
+          <div class="tray-h">Drag onto a practice · drop back here to unlink</div>
+          <div id="trayChips" style="display:contents"></div>
+        </div>
+      </div>
+      <div class="dock-pane" data-pane="practices" hidden>
+        <button type="button" class="dock-add" data-add="practice" hidden>+ Add practice</button>
+        <div class="tray" id="ptray" data-drop="ptray">
+          <div class="tray-h">Drag onto a value · drop back here to unlink</div>
+          <div id="ptrayChips" style="display:contents"></div>
+        </div>
+      </div>
+      <div class="dock-pane" data-pane="values" hidden><button type="button" class="dock-add" data-add="value" hidden>+ Add value</button><div class="key" id="keyV"></div></div>
+    </aside>
+    <div class="mapmain">
+      <div id="viewRings" class="ringsolo"><div class="ringbox" id="ringbox"></div></div>
+      <div id="viewLinks" class="ringsolo" hidden>
+        <div class="connmode" id="connMode" role="group" aria-label="Connections layout"><button type="button" id="cmRepeat" class="on" title="Show every place an item belongs">All</button><button type="button" id="cmUnique" title="Show each item once, with its connections">Unique</button></div>
+        <div class="ringbox" id="linkbox"></div>
+      </div>
+      <div id="viewPillars" hidden></div>
+    </div>
+  </div>
+  <div class="kprint" id="kprint"><div class="key" id="keyVp"></div><div class="key" id="keyP"></div><div class="key" id="keyS"></div></div>
+</section>
+
+<aside class="drawer" id="sgDrawer" aria-live="polite" aria-hidden="true">
+  <div class="dr-h"><div class="k" id="sgDrK"></div><h3 id="sgDrT"></h3><button type="button" class="dr-edit" id="sgDrE" hidden title="Change the wording of this item">✎ Edit</button><button class="dr-x" id="sgDrX" aria-label="Close">×</button></div>
+  <div class="dr-b" id="sgDrB"></div>
+</aside>
+<input type="file" id="fDoc" accept="application/pdf,.pdf" hidden>
+<div class="verback" id="verDlg" hidden>
+  <div class="verdlg" role="dialog" aria-modal="true" aria-labelledby="verTitle">
+    <div class="verdlg-h"><h3 id="verTitle">Saved versions</h3><button type="button" id="verClose" aria-label="Close" title="Close">×</button></div>
+    <input type="search" id="verSearch" placeholder="Search by name…" aria-label="Search saved versions" autocomplete="off">
+    <div class="verlist" id="verList" aria-live="polite"></div>
+    <div class="verdlg-f"><span id="verCount"></span><button type="button" class="btn" id="verMore" hidden>Show more</button></div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>

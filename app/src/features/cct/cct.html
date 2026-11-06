@@ -1,0 +1,107 @@
+<section class="hero">
+  <div class="hero-in">
+    <div>
+      <div class="eyebrow">Calybrate Blueprint</div>
+      <h1>The Performance Framework</h1>
+    </div>
+    <div class="stats" aria-label="Summary">
+      <div class="stat"><b>3</b><span>Pillars: Care · Convenience · Time</span></div>
+      <div class="stat"><b>7</b><span>Areas measured</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════ CCT framework ═════════════ -->
+<section class="section" id="cct">
+  <div class="sec-head">
+    <div>
+      <h2>The Performance Framework <span class="tag">Care · Convenience · Time</span></h2>
+      <p>Care comes first, then Convenience — and we value your Time. Every part of the organisation is measured through CCT, which turns into the metrics and standards behind expectations and reviews.</p>
+    </div>
+    <div class="legend-d" id="dLegend">
+      <span class="lbl" style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)">Highlight</span>
+      <button class="chip" data-d="care"><i style="background:var(--green-700)">C</i>Care</button>
+      <button class="chip" data-d="conv"><i style="background:var(--blue-600)">C</i>Convenience</button>
+      <button class="chip" data-d="time"><i style="background:var(--blue-900)">T</i>Time</button>
+    </div>
+  </div>
+
+  <div class="cct-board" id="cctBoard">
+    <svg class="edges" id="cctEdges" xmlns="http://www.w3.org/2000/svg"><defs id="cctDefs"></defs></svg>
+
+    <!-- Part A : organisation → CCT → metrics/standards -->
+    <div class="card" style="z-index:1">
+      <div class="card-h"><h3>CCT across the organisation</h3></div>
+
+      <div class="cn org" id="o-org">Organisation</div>
+
+      <div class="parts">
+        <div class="cn part" id="o-ops" data-link="operations">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V7l9-4 9 4v14"/><path d="M12 8v6M9 11h6"/><path d="M9 21v-4h6v4"/></svg></div>
+          Operations
+        </div>
+        <div class="cn part" id="o-nur">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></div>
+          Team 1
+        </div>
+        <div class="cn part" id="o-doc">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v6a4 4 0 0 0 8 0V3"/><path d="M10 13v3a4 4 0 0 0 8 0v-1"/><circle cx="18" cy="13" r="2"/></svg></div>
+          Team 2<small>Role groups · Seniors</small>
+        </div>
+        <div class="cn part" id="o-adm">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
+          Administration
+        </div>
+      </div>
+
+      <div class="cn core" id="o-cct">
+        <div class="big">CCT</div>
+        <div class="words"><span>Care</span><span>Convenience</span><span>Time</span></div>
+        <div class="tg">Care comes first, then Convenience — and we value your Time.</div>
+      </div>
+
+      <div class="two s1">
+        <div class="cn m" id="o-met">Metrics</div>
+        <div class="cn m" id="o-std">Standards</div>
+      </div>
+      <div class="joint" id="o-j"></div>
+      <div class="two s2">
+        <div class="cn out" id="o-exp">Expectations</div>
+        <div class="cn out" id="o-rev">Review Criteria</div>
+      </div>
+    </div>
+
+    <!-- Part B : CCT by unit -->
+    <div class="card cct-b" style="z-index:1" id="cardB">
+      <div class="card-h"><h3>How CCT is read in each unit</h3></div>
+      <div class="cct-b-wrap">
+        <div class="units">
+          <div class="hgroup" id="hgroup">
+            <span class="hg-label">Operations</span>
+            <div class="unit" id="u-a"><h4>Unit A</h4><div class="cc">
+              <span class="dim-chip d-care" data-d="care"><b>C</b>Care</span>
+              <span class="dim-chip d-conv" data-d="conv"><b>C</b>Convenience</span></div></div>
+            <div class="unit" id="u-b"><h4>Unit B</h4><div class="cc">
+              <span class="dim-chip d-time" data-d="time"><b>T</b>Turnaround Time</span>
+              <span class="dim-chip d-care" data-d="care"><b>C</b>Care</span>
+              <span class="dim-chip d-conv" data-d="conv"><b>C</b>Convenience</span></div></div>
+          </div>
+          <div class="unit" id="u-c"><h4>Team 3</h4><div class="cc">
+            <span class="dim-chip d-time" data-d="time"><b>T</b>Time <small>(availability)</small></span>
+            <span class="dim-chip d-care" data-d="care"><b>C</b>Care</span>
+            <span class="dim-chip d-conv" data-d="conv"><b>C</b>Convenience</span></div></div>
+          <div class="unit" id="u-d"><h4>Team 4</h4><div class="cc">
+            <span class="dim-chip d-time" data-d="time"><b>T</b>Time</span>
+            <span class="dim-chip d-care" data-d="care"><b>C</b>Care <small>(accuracy)</small></span>
+            <span class="dim-chip d-conv" data-d="conv"><b>C</b>Convenience</span></div></div>
+        </div>
+
+        <div class="hero-fw" id="u-hero">
+          <div class="k">The framework</div>
+          <div class="big">CCT</div>
+          <div class="w">Care – Convenience – Time</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,32 @@
+name: security
+on:
+  pull_request:
+  push:
+    branches: [main, production]
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: actions/setup-node@v4
+        with: { node-version: 20, cache: npm, cache-dependency-path: app/package-lock.json }
+      - name: Install
+        run: npm ci
+        working-directory: app
+      - name: Typecheck, lint, unit tests
+        run: npm run typecheck && npm run lint && npm test
+        working-directory: app
+      - name: Dependency audit (high and above)
+        run: npm audit --audit-level=high
+        working-directory: app
+      - name: Secret scan
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: No service key or management token in the browser bundle or tracked files
+        run: |
+          if git grep -nE 'service_role|SUPABASE_ACCESS_TOKEN=sbp_|sbp_[0-9a-f]{30,}' -- . ':!docs' ':!supabase/functions' ':!.github' ':!*.md'; then
+            echo "Found a service key or management token in tracked files"; exit 1
+          fi

@@ -1,0 +1,243 @@
+<!-- ═════════════ Hero ═════════════ -->
+<section class="hero">
+  <div class="hero-in">
+    <div>
+      <div class="eyebrow">Calybrate Blueprint</div>
+      <h1>Practice Layout</h1>
+    </div>
+    <div class="stats" aria-label="Summary">
+      <div class="stat"><b>7</b><span>Life-cycle stages</span></div>
+      <div class="stat"><b>9</b><span>Defined practices</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════ Life cycle ═════════════ -->
+<section class="section" id="lifecycle">
+  <div class="sec-head">
+    <div>
+      <h2>Practice Layout</h2>
+    </div>
+    <div id="lcCats" class="lc-cats-slot"></div>
+  </div>
+
+  <div class="keyrow">
+    <span class="key"><s class="t"></s>Stage sequence</span>
+    <span class="key"><s></s>Process flow</span>
+    <span class="key"><s class="d"></s>Review outcomes</span>
+    <span class="key"><s class="g"></s>Review ⇄ Development loop</span>
+  </div>
+
+  <div class="lc-scroll" id="lcScroll">
+    <div class="lc-scaler" id="lcScaler">
+      <div class="lc" id="lc">
+
+        <!-- lane backgrounds -->
+        <div class="lane first" style="left:0;width:165px"></div>
+        <div class="lane" style="left:165px;width:165px"></div>
+        <div class="lane" style="left:330px;width:195px"></div>
+        <div class="lane" style="left:525px;width:165px"></div>
+        <div class="lane" style="left:690px;width:295px"></div>
+        <div class="lane" style="left:985px;width:430px"></div>
+        <div class="lane" style="left:1415px;width:465px"></div>
+
+        <!-- group headers -->
+        <div class="group intake" style="left:0;width:525px"><i class="l"></i><span>Intake</span><i class="r"></i></div>
+        <div class="group maint" style="left:525px;width:890px"><i class="l"></i><span>Maintenance &amp; Retention</span><i class="r"></i></div>
+        <div class="group exit" style="left:1415px;width:465px"><i class="l"></i><span>Exit</span><i class="r"></i></div>
+
+        <!-- stage headers -->
+        <div class="stage g-in" id="st1" data-info="s1" style="left:0;width:165px"><div class="num" id="c1">01</div><div class="stage-name">Pipeline Building<br>and Sourcing</div></div>
+        <div class="stage g-in" id="st2" data-info="s2" style="left:165px;width:165px"><div class="num" id="c2">02</div><div class="stage-name">Recruitment</div></div>
+        <div class="stage g-in" id="st3" data-info="s3" style="left:330px;width:195px"><div class="num" id="c3">03</div><div class="stage-name">Onboarding</div></div>
+        <div class="stage" id="st4" data-info="s4" style="left:525px;width:165px"><div class="num" id="c4">04</div><div class="stage-name">Probation</div></div>
+        <div class="stage" id="st5" data-info="s5" style="left:690px;width:295px"><div class="num" id="c5">05</div><div class="stage-name">Review</div></div>
+        <div class="stage" id="st6" data-info="s6" style="left:985px;width:430px"><div class="num" id="c6">06</div><div class="stage-name">Development &amp; Advancement</div></div>
+        <div class="stage g-ex" id="st7" data-info="s7" style="left:1415px;width:465px"><div class="num" id="c7">07</div><div class="stage-name">Exit</div></div>
+
+        <!-- sub-stages -->
+        <div class="sub g-in-sub" style="left:340px;top:172px;width:185px"><b>3.1</b><span>Pre-Onboarding<em>(Induction / engagement)</em></span></div>
+        <div class="sub g-in-sub" style="left:340px;top:222px;width:185px"><b>3.2</b><span>Onboarding</span></div>
+        <div class="sub" style="left:700px;top:172px;width:280px"><b>5.1</b><span>Expectation</span></div>
+        <div class="sub" style="left:700px;top:210px;width:280px"><b>5.2</b><span>Reviews</span></div>
+        <div class="sub" style="left:995px;top:172px;width:300px"><b>6.1</b><span>Development</span></div>
+
+        <!-- 7.1 voluntary exit (with children) -->
+        <div class="sub-wrap" style="left:1428px;top:168px">
+          <div class="sub" style="position:relative;width:150px"><b style="border-color:var(--green-900);color:var(--green-900)">7.1</b><span>Voluntary exit</span></div>
+          <div class="tree side" style="--ind:20px;margin-left:26px">
+            <div class="leaf g" data-p="9"><i class="tick"></i>Retirement</div>
+            <div class="leaf g" data-p="9"><i class="tick"></i>Resignation</div>
+          </div>
+        </div>
+
+        <!-- SOP chips (stages 1 & 2) -->
+        <div class="sop-row" data-sops-for="P1" data-sop-cls="sop" style="left:0;width:165px;top:210px"><span class="sop" title="SOP 1 — Talent Acquisition &amp; Selection">SOP 1</span><span class="sop" title="SOP 5 — Learning & Development">SOP 5</span><span class="sop" title="SOP 12 — New Employee Orientation, Early Career Management">SOP 12</span></div>
+        <div class="sop-row" data-sops-for="P1" data-sop-cls="sop" style="left:165px;width:165px;top:210px"><span class="sop" title="SOP 1 — Talent Acquisition &amp; Selection">SOP 1</span><span class="sop" title="SOP 5 — Learning & Development">SOP 5</span><span class="sop" title="SOP 12 — New Employee Orientation, Early Career Management">SOP 12</span></div>
+
+        <!-- ───── Practice 1 : OPS Skills Developing Center ───── -->
+        <div class="band" id="ops" data-p="1" data-info="ops" style="left:10px;top:292px;width:1395px;height:112px">
+          <span class="pbadge">Practice 1</span>
+          <div class="band-title"><span data-pname="P1">OPS Skills Developing Center</span></div>
+          <div class="phases">
+            <div class="ph" style="width:320px"><i class="al"></i><span>Phase 02</span><i class="ar"></i></div>
+            <div class="ph" style="width:195px"><i class="al"></i><span>Phase 01</span><i class="ar"></i></div>
+            <div class="ph" style="width:880px"><i class="al"></i><span>Phase 02</span><i class="ar"></i></div>
+          </div>
+        </div>
+        <div class="cluster" style="left:10px;top:404px;width:320px">
+          <div class="tree" style="--t:22px">
+            <div class="leaf" data-p="1"><i class="tick"></i>Level Based — Level 01 to Level 05</div>
+            <div class="leaf" data-p="1"><i class="tick"></i>Applicable to all hires <small>(FT / Contracts / etc.)</small></div>
+            <div class="leaf" data-p="1"><i class="tick"></i>Set the Standard</div>
+          </div>
+        </div>
+
+        <!-- ───── Stage 04/05 : Review cycle ───── -->
+        <div class="frame" style="left:548px;top:430px;width:384px;height:510px"><span class="frame-lbl">Review cycle</span></div>
+
+        <div class="cluster" style="left:572px;top:454px;width:270px">
+          <div class="box" id="n-metric" data-p="3" data-info="metric">
+            <span class="pbadge">Practice 3</span><span class="sop-tags" data-sops-for="P3" data-sop-cls="sop-tag"><span class="sop-tag" title="SOP 6 — Performance Management">SOP 6</span></span>
+            <div class="b-title"><span data-pname="P3">Metric Driven</span></div><div class="b-sub">(Outcome driven)</div>
+          </div>
+          <div class="tree" id="t-metric">
+            <div class="leaf" data-p="3"><i class="tick"></i>Technical Review</div>
+            <div class="leaf" data-p="3"><i class="tick"></i>By annual Review <small>(Behavioural)</small></div>
+          </div>
+        </div>
+
+        <div class="cluster" style="left:572px;top:672px;width:270px">
+          <div class="box" id="n-fb" data-p="7" data-info="fb">
+            <span class="pbadge">Practice 7</span><span class="sop-tags" data-sops-for="P7" data-sop-cls="sop-tag"></span>
+            <div class="b-title"><span data-pname="P7">Feedback Practice</span></div>
+          </div>
+          <div class="tree" style="--t:12px">
+            <div class="leaf g strong" id="n-mon" data-p="7" data-info="fb"><i class="tick"></i>Monday Stand-In Meetings</div>
+          </div>
+          <div class="tree" style="margin-left:66px;--t:8px;--ind:20px">
+            <div class="leaf g" data-p="7"><i class="tick"></i>Review Matrix</div>
+            <div class="leaf g" data-p="7"><i class="tick"></i>Provide team feedback</div>
+            <div class="leaf g" data-p="7"><i class="tick"></i>Provide individual feedback</div>
+          </div>
+        </div>
+
+        <!-- ───── Stage 06 : Development & Advancement ───── -->
+        <div class="cluster" style="left:945px;top:430px;width:450px">
+          <div class="box" id="n-comp" data-p="2" data-info="comp">
+            <span class="pbadge">Practice 2</span><span class="sop-tags" data-sops-for="P2" data-sop-cls="sop-tag"><span class="sop-tag" title="SOP 5 — Learning & Development">SOP 5</span></span>
+            <div class="b-title"><span class="ref">6.1.1</span><span data-pname="P2">Competitive Self Development</span></div>
+            <div class="b-sub">(Self Directed Learning)</div>
+          </div>
+          <div class="tree">
+            <div class="leaf" data-p="2"><i class="tick"></i>Self Accountability</div>
+            <div class="leaf" data-p="2"><i class="tick"></i>Org. Support</div>
+            <div class="leaf" data-p="2"><i class="tick"></i>Incentive wise towards advancement</div>
+          </div>
+        </div>
+
+        <div class="cluster" style="left:1005px;top:690px;width:390px">
+          <div class="box" id="n-adv" data-p="4" data-info="adv">
+            <span class="pbadge">Practice 4</span><span class="sop-tags" data-sops-for="P4" data-sop-cls="sop-tag"><span class="sop-tag" title="SOP 6 — Performance Management">SOP 6</span></span>
+            <div class="b-title"><span class="ref">6.2</span><span data-pname="P4">Advancement</span></div>
+            <div class="b-sub">(Outcome based)</div>
+          </div>
+          <div class="tree">
+            <div class="leaf" data-p="4"><i class="tick"></i>Positions or Scope enhancements</div>
+            <div class="leaf" data-p="4"><i class="tick"></i>Recommendations</div>
+          </div>
+        </div>
+
+        <div class="cluster" style="left:1235px;top:890px;width:160px">
+          <div class="box" id="n-eng" data-p="8" data-info="eng">
+            <span class="pbadge">Practice 8</span><span class="sop-tags" data-sops-for="P8" data-sop-cls="sop-tag"></span>
+            <div class="b-title"><span data-pname="P8">Engagement</span></div><div class="b-sub">Based on CCT</div>
+          </div>
+        </div>
+
+        <div class="cluster" style="left:1005px;top:972px;width:170px">
+          <div class="box" id="n-inc" data-p="5" data-info="inc">
+            <span class="pbadge">Practice 5</span><span class="sop-tags" data-sops-for="P5" data-sop-cls="sop-tag"></span>
+            <div class="b-title"><span data-pname="P5">Incentive</span></div>
+          </div>
+        </div>
+
+        <div class="cluster" style="left:1005px;top:1090px;width:170px">
+          <div class="box" id="n-dev" data-p="6" data-info="dev" style="height:64px;display:flex;flex-direction:column;justify-content:center">
+            <span class="pbadge">Practice 6</span><span class="sop-tags" data-sops-for="P6" data-sop-cls="sop-tag"></span>
+            <div class="b-title"><span data-pname="P6">Development</span></div><div class="b-sub">(6.1.1)</div>
+          </div>
+        </div>
+
+        <!-- ───── Stage 07 : Exit ───── -->
+        <div class="sub" style="left:1430px;top:284px;width:220px"><b style="border-color:var(--green-900);color:var(--green-900)">7.2</b><span>Non-Voluntary exit</span></div>
+        <span class="pbadge" style="left:1612px;top:284px;position:absolute" data-p="9">Practice 9</span>
+
+        <div class="pill g" id="x-trig" data-p="9" style="position:absolute;left:1430px;top:340px;width:120px;height:42px">Exit Triggers</div>
+        <div class="tags" data-p="9" style="left:1568px;top:338px;width:300px">
+          <span class="sop-slot" data-sops-for="P9" data-sop-cls="sop" style="display:contents"><span class="sop" title="SOP 8 — Employee Farewell">SOP 8</span></span><span class="sop" title="LOA — used with SOP 8 (Employee Farewell)">LOA</span><span class="sop" title="NDA — used with SOP 8 (Employee Farewell)">NDA</span>
+          <span class="sop" title="Handbook and acceptance">Handbook + Acceptance</span>
+        </div>
+
+        <div class="pill" id="x-av" data-p="9" style="position:absolute;left:1430px;top:430px;width:120px;height:38px">Availability</div>
+        <div class="pill" id="x-att" data-p="9" style="position:absolute;left:1590px;top:430px;width:104px;height:38px">Attendance</div>
+        <div class="pill" id="x-mr" data-p="9" style="position:absolute;left:1730px;top:430px;width:128px;height:38px">Mutual Respect</div>
+
+        <div class="pill" id="x-c1" data-p="9" style="position:absolute;left:1430px;top:492px;width:120px;height:38px">Consistency</div>
+        <div class="pill" id="x-c2" data-p="9" style="position:absolute;left:1430px;top:540px;width:120px;height:38px">Customer first</div>
+        <div class="pill" id="x-c3" data-p="9" style="position:absolute;left:1430px;top:588px;width:120px;height:38px">Quality</div>
+
+        <div class="box cct" id="x-cct" data-p="9" data-info="cct" style="position:absolute;left:1597px;top:510px;width:90px"><div class="b-title">CCT</div></div>
+
+        <div class="pill" id="x-mis" data-p="9" style="position:absolute;left:1730px;top:510px;width:128px;height:38px">Misconduct</div>
+        <div class="pill" id="x-te" data-p="9" style="position:absolute;left:1730px;top:578px;width:128px;height:40px">Team Engagement</div>
+
+        <div class="pill" id="x-rev" data-p="9" style="position:absolute;left:1587px;top:590px;width:110px;height:38px">Review</div>
+        <div class="pill exitpill" id="x-exit" data-p="9" style="position:absolute;left:1587px;top:662px;width:110px;height:38px">Exit</div>
+
+        <!-- Engagement outputs -->
+        <div class="divider" style="left:1430px;width:430px;top:738px"><span>Engagement · Practice 8</span></div>
+
+        <div class="pill" id="e-perf" data-p="8" style="position:absolute;left:1470px;top:812px;width:150px;height:46px;display:grid;place-items:center">Performance engagement</div>
+        <div class="cluster" style="left:1620px;top:770px;width:240px">
+          <div class="tree side" style="--ind:22px">
+            <div class="leaf g" data-p="8"><i class="tick"></i>Engage to celebrate</div>
+            <div class="leaf g" data-p="8"><i class="tick"></i>Engage to correct</div>
+            <div class="leaf g" data-p="8"><i class="tick"></i>Engage to combat</div>
+          </div>
+        </div>
+
+        <div class="mini-lbl" data-p="8" style="left:1470px;top:960px;width:160px">Management practices for engagement</div>
+        <div class="pill" id="e-team" data-p="8" style="position:absolute;left:1470px;top:990px;width:150px;height:44px;display:grid;place-items:center">Team Engagement</div>
+        <div class="mini-lbl note" data-p="8" style="left:1470px;top:1042px;width:150px">CCT towards employees — giving before expecting</div>
+        <div class="cluster" style="left:1620px;top:914px;width:240px">
+          <div class="tree side" style="--ind:22px">
+            <div class="leaf g" data-p="8"><i class="tick"></i>Performance engagement</div>
+            <div class="leaf g" data-p="8"><i class="tick"></i>Do and Don'ts</div>
+            <div class="leaf g" data-p="8"><i class="tick"></i>Leadership management</div>
+            <div class="leaf g" data-p="8"><i class="tick"></i>Employee care <small>how we treat</small></div>
+          </div>
+        </div>
+
+        <div class="box end" id="n-exit" data-p="6 9" data-info="exitend" style="position:absolute;left:1430px;top:1090px;width:140px;height:64px;display:flex;align-items:center;justify-content:center"><div class="b-title">Exit</div></div>
+
+        <!-- loop label -->
+        
+
+        <svg class="edges" id="lcEdges" xmlns="http://www.w3.org/2000/svg">
+          <defs id="lcDefs"></defs>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="m-only" id="mobileLC">
+    <div class="m-cat intake">Intake</div><details class="m-stage g-in" open><summary><span class="num">01</span><span class="nm">Pipeline Building and Sourcing</span><i class="chev"></i></summary><div class="m-body"><div class="m-tags" data-sops-for="P1" data-sop-cls="sop"><span class="sop" title="Talent Acquisition & Selection">SOP 1</span><span class="sop" title="Learning & Development">SOP 5</span><span class="sop" title="New Employee Orientation, Early Career Management">SOP 12</span></div><div class="m-prac"><span class="pbadge">Practice 1</span><div class="b-title"><span data-pname="P1">OPS Skills Developing Center</span></div><div class="b-sub">Phase 02</div><ul class="m-leaves"><li>Level Based — Level 01 to Level 05</li><li>Applicable to all hires (FT / Contracts / etc.)</li><li>Set the Standard</li></ul></div></div></details><details class="m-stage g-in"><summary><span class="num">02</span><span class="nm">Recruitment</span><i class="chev"></i></summary><div class="m-body"><div class="m-tags" data-sops-for="P1" data-sop-cls="sop"><span class="sop" title="Talent Acquisition & Selection">SOP 1</span><span class="sop" title="Learning & Development">SOP 5</span><span class="sop" title="New Employee Orientation, Early Career Management">SOP 12</span></div><div class="m-prac"><span class="pbadge">Practice 1</span><div class="b-title"><span data-pname="P1">OPS Skills Developing Center</span></div><div class="b-sub">Phase 02</div><ul class="m-leaves"><li>Level Based — Level 01 to Level 05</li><li>Applicable to all hires (FT / Contracts / etc.)</li><li>Set the Standard</li></ul></div></div></details><details class="m-stage g-in"><summary><span class="num">03</span><span class="nm">Onboarding</span><i class="chev"></i></summary><div class="m-body"><div class="m-sub"><b>3.1</b><span>Pre-Onboarding<em>Induction / engagement</em></span></div><div class="m-sub"><b>3.2</b><span>Onboarding</span></div><div class="m-prac"><span class="pbadge">Practice 1</span><div class="b-title"><span data-pname="P1">OPS Skills Developing Center</span></div><div class="b-sub">Phase 01</div><ul class="m-leaves"><li>Level Based — Level 01 to Level 05</li><li>Applicable to all hires (FT / Contracts / etc.)</li><li>Set the Standard</li></ul></div></div></details><div class="m-cat maint">Maintenance &amp; Retention</div><details class="m-stage "><summary><span class="num">04</span><span class="nm">Probation</span><i class="chev"></i></summary><div class="m-body"><div class="m-prac"><span class="pbadge">Practice 1</span><div class="b-title"><span data-pname="P1">OPS Skills Developing Center</span></div><div class="b-sub">Phase 02</div><ul class="m-leaves"><li>Level Based — Level 01 to Level 05</li><li>Applicable to all hires (FT / Contracts / etc.)</li><li>Set the Standard</li></ul></div><p class="m-note">The Review cycle (stage 05) begins here, in probation.</p></div></details><details class="m-stage "><summary><span class="num">05</span><span class="nm">Review</span><i class="chev"></i></summary><div class="m-body"><div class="m-sub"><b>5.1</b><span>Expectation</span></div><div class="m-sub"><b>5.2</b><span>Reviews</span></div><div class="m-cycle"><span class="m-cl">Review cycle · spans stages 04 – 05</span><div class="m-prac"><span class="pbadge">Practice 3</span><span class="m-sop-slot" data-sops-for="P3" data-sop-cls="sop m-sop"><span class="sop m-sop" title="Performance Management">SOP 6</span></span><div class="b-title"><span data-pname="P3">Metric Driven</span></div><div class="b-sub">(Outcome driven)</div><ul class="m-leaves"><li>Technical Review</li><li>By annual Review (behavioural)</li></ul></div><div class="m-arrow">↓</div><div class="m-prac"><span class="pbadge">Practice 7</span><span class="m-sop-slot" data-sops-for="P7" data-sop-cls="sop m-sop"></span><div class="b-title"><span data-pname="P7">Feedback Practice</span></div><ul class="m-leaves g"><li><b>Monday Stand-In Meetings</b></li></ul><ul class="m-leaves g nest"><li>Review Matrix</li><li>Provide team feedback</li><li>Provide individual feedback</li></ul></div></div><div class="m-arrow out">↓ review outcomes</div><div class="m-chain"><span>Advancement</span><i>→</i><span>Incentive</span><i>→</i><span>Development</span></div></div></details><details class="m-stage "><summary><span class="num">06</span><span class="nm">Development & Advancement</span><i class="chev"></i></summary><div class="m-body"><div class="m-sub"><b>6.1</b><span>Development</span></div><div class="m-prac"><span class="pbadge">Practice 2</span><span class="m-sop-slot" data-sops-for="P2" data-sop-cls="sop m-sop"><span class="sop m-sop" title="Learning & Development">SOP 5</span></span><div class="b-title"><span class=ref>6.1.1</span><span data-pname="P2">Competitive Self Development</span></div><div class="b-sub">(Self Directed Learning)</div><ul class="m-leaves"><li>Self Accountability</li><li>Org. Support</li><li>Incentive wise towards advancement</li></ul></div><div class="m-prac"><span class="pbadge">Practice 4</span><span class="m-sop-slot" data-sops-for="P4" data-sop-cls="sop m-sop"><span class="sop m-sop" title="Performance Management">SOP 6</span></span><div class="b-title"><span class=ref>6.2</span><span data-pname="P4">Advancement</span></div><div class="b-sub">(Outcome based)</div><ul class="m-leaves"><li>Positions or Scope enhancements</li><li>Recommendations</li></ul></div><div class="m-prac"><span class="pbadge">Practice 5</span><span class="m-sop-slot" data-sops-for="P5" data-sop-cls="sop m-sop"></span><div class="b-title"><span data-pname="P5">Incentive</span></div></div><div class="m-prac"><span class="pbadge">Practice 6</span><span class="m-sop-slot" data-sops-for="P6" data-sop-cls="sop m-sop"></span><div class="b-title"><span data-pname="P6">Development</span></div><div class="b-sub">(6.1.1)</div><div class="m-chain"><span>Incentive</span><i>→</i><span>Exit</span></div></div><div class="m-prac"><span class="pbadge">Practice 8</span><span class="m-sop-slot" data-sops-for="P8" data-sop-cls="sop m-sop"></span><div class="b-title"><span data-pname="P8">Engagement</span></div><div class="b-sub">Based on CCT</div><div class="m-h">Performance engagement</div><ul class="m-leaves g"><li>Engage to celebrate</li><li>Engage to correct</li><li>Engage to combat</li></ul><div class="m-h">Team Engagement</div><p class="m-small">management practices for engagement</p><ul class="m-leaves g"><li>Performance engagement</li><li>Do and Don'ts</li><li>Leadership management</li><li>Employee care — how we treat</li></ul><p class="m-small it">CCT towards employees — giving before expecting</p></div></div></details><div class="m-cat exit">Exit</div><details class="m-stage g-ex"><summary><span class="num">07</span><span class="nm">Exit</span><i class="chev"></i></summary><div class="m-body"><div class="m-sub"><b>7.1</b><span>Voluntary exit</span></div><ul class="m-leaves g"><li>Retirement</li><li>Resignation</li></ul><div class="m-sub"><b>7.2</b><span>Non-Voluntary exit</span></div><div class="m-prac"><span class="pbadge">Practice 9</span><div class="b-title">Exit Triggers</div><div class="m-tags"><span class="m-slot" data-sops-for="P9" data-sop-cls="sop" style="display:contents"><span class="sop" title="Employee Farewell">SOP 8</span></span><span class="sop" title="">LOA</span><span class="sop" title="">NDA</span><span class="sop" title="">Handbook + Acceptance</span></div><div class="m-h">Availability</div><div class="m-chain"><span>Availability</span><i>→</i><span>Attendance</span><i>→</i><span>CCT</span></div><div class="m-h">Quality of work</div><div class="m-chain"><span>Consistency / Customer first / Quality</span><i>→</i><span>CCT</span></div><div class="m-h">Mutual respect</div><div class="m-chain"><span>Mutual Respect</span><i>→</i><span>Misconduct</span><i>→</i><span>Team Engagement</span></div><div class="m-h">Outcome</div><div class="m-chain"><span>CCT</span><i>→</i><span>Review</span><i>→</i><span>Exit</span></div></div></div></details>
+    <p class="m-hint">Rotate your phone or open on a larger screen for the full swim-lane diagram.</p>
+  </div>
+</section>
+
+<aside class="drawer" id="drawer" aria-live="polite" aria-hidden="true">
+  <div class="dr-h"><div class="k" id="drK"></div><h3 id="drT"></h3><button class="dr-x" id="drX" aria-label="Close">×</button></div>
+  <div class="dr-b" id="drB"></div>
+</aside>

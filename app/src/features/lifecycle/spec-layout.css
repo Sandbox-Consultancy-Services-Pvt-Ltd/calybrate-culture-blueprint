@@ -1,0 +1,56 @@
+/* Swimlane Practice Layout (Healthcare, Engineering, Banking). Colours come from the theme tokens in base.css / themes.css. */
+.sl-scroll{overflow:auto;padding:2px 2px 14px}
+.sl{--lab:212px;min-width:calc(var(--lab) + var(--n) * 172px);font-size:13px;color:var(--ink)}
+.sl-row{display:grid;grid-template-columns:var(--lab) repeat(var(--n),minmax(0,1fr));align-items:stretch}
+
+/* phases */
+.sl-phase{display:flex;align-items:center;gap:10px;padding:9px 12px;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;border-radius:10px 10px 0 0}
+.sl-phase i{flex:1;height:1.5px;background:currentColor;opacity:.35}
+.sl-phase.p0{background:var(--blue-100);color:var(--blue-800)}
+.sl-phase.p1{background:var(--green-100);color:var(--green-800)}
+.sl-phase.p2{background:var(--blue-200);color:var(--blue-900)}
+
+/* stages */
+.sl-corner{display:flex;align-items:flex-end;padding:0 14px 10px 4px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+.sl-stage{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;background:none;border:0;padding:12px 8px 14px;text-align:center;cursor:pointer;font:inherit;color:inherit;border-radius:0 0 10px 10px}
+.sl-stage::before,.sl-stage::after{content:"";position:absolute;top:30px;height:2px;background:var(--blue-300)}
+.sl-stage.has-prev::before{left:0;right:50%}
+.sl-stage.has-next::after{left:50%;right:0}
+.sl-num{position:relative;z-index:2;display:grid;place-items:center;width:36px;height:36px;margin:0 auto 8px;border-radius:50%;background:var(--blue-700);color:#fff;font-weight:800;font-size:13px;box-shadow:0 0 0 4px #fff}
+.sl-stage.gb .sl-num{background:var(--green-700)}
+.sl-stage.gc .sl-num{background:var(--blue-500)}
+.sl-stage b{display:block;font-size:14px;font-weight:800;line-height:1.25;color:var(--blue-900)}
+.sl-stage ul{list-style:none;margin-top:6px;display:flex;flex-direction:column;gap:2px}
+.sl-stage li{font-size:11.5px;color:var(--ink-3);line-height:1.3}
+.sl-stage:hover,.sl-stage.hl{background:var(--blue-50)}
+.sl-stage.sel{background:var(--blue-100)}
+.sl-stage:focus-visible,.sl-card:focus-visible{outline:3px solid var(--blue-500);outline-offset:2px}
+
+/* feedback loops */
+.sl-loop-row{margin-bottom:14px}
+.sl-loop{position:relative;height:30px;margin-top:-2px;border:2px dashed var(--green-600);border-top:0;border-radius:0 0 44px 44px;display:flex;align-items:flex-end;justify-content:center}
+.sl-loop span{transform:translateY(50%);background:#fff;padding:0 10px;font-size:12px;font-weight:700;color:var(--green-800);white-space:nowrap}
+
+/* practices */
+.sl-group{margin:18px 0 6px;padding:6px 12px;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-800);background:var(--blue-100);border-radius:8px}
+.sl-lane{min-height:66px;border-bottom:1px solid var(--blue-100)}
+.sl-label{display:flex;flex-direction:column;justify-content:center;gap:3px;padding:10px 14px 10px 4px}
+.sl-label b{font-size:13.5px;font-weight:800;line-height:1.25;color:var(--blue-900)}
+.sl-badge{align-self:flex-start;font-size:9.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:var(--blue-700);padding:2px 8px;border-radius:999px}
+.sl-cell{border-left:1px dashed var(--blue-100)}
+.sl-cell.hl{background:var(--blue-50)}
+.sl-card{position:relative;z-index:2;align-self:center;margin:8px;padding:10px 12px;display:flex;flex-direction:column;gap:8px;text-align:left;font:inherit;color:inherit;cursor:pointer;background:#fff;border:1.5px solid var(--blue-300);border-left:5px solid var(--blue-700);border-radius:12px;box-shadow:var(--shadow-1)}
+.sl-card:hover,.sl-card.sel{border-color:var(--blue-500);border-left-color:var(--blue-700);box-shadow:var(--shadow-2)}
+.sl-items{display:flex;flex-wrap:wrap;gap:6px}
+.sl-item{font-size:12px;padding:3px 10px;border-radius:999px;background:var(--blue-50);border:1px solid var(--blue-200);color:var(--ink)}
+.sl-sops{display:flex;flex-wrap:wrap;gap:6px}
+
+/* named paths */
+.sl-chain{margin-top:16px;align-items:center}
+.sl-chain-label b{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--green-800)}
+.sl-steps{display:flex;flex-wrap:wrap;align-items:center;gap:8px 0}
+.sl-step{display:inline-flex;align-items:center}
+.sl-step i{font-style:normal;color:var(--green-700);margin:0 8px;font-weight:800}
+.sl-step em{font-style:normal;font-weight:700;font-size:12.5px;padding:6px 14px;border-radius:999px;border:1.5px solid var(--green-600);color:var(--green-800);background:var(--green-50)}
+
+@media print{.sl-scroll{overflow:visible}.drawer{display:none}}

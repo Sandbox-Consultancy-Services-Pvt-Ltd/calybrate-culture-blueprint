@@ -1,0 +1,45 @@
+.ag{position:fixed;inset:0;z-index:300;display:flex;align-items:center;justify-content:center;padding:20px;overflow:hidden;background:radial-gradient(60% 55% at 12% 8%,rgba(125,114,201,.55) 0%,rgba(125,114,201,0) 70%),radial-gradient(50% 50% at 92% 14%,color-mix(in srgb,var(--green-500) 28%,transparent) 0%,color-mix(in srgb,var(--green-500) 0%,transparent) 70%),radial-gradient(55% 60% at 88% 95%,color-mix(in srgb,var(--green-500) 50%,transparent) 0%,color-mix(in srgb,var(--green-500) 0%,transparent) 70%),radial-gradient(40% 45% at 8% 92%,color-mix(in srgb,var(--blue-600) 55%,transparent) 0%,color-mix(in srgb,var(--blue-600) 0%,transparent) 70%),linear-gradient(145deg,var(--blue-900) 0%,var(--blue-700) 55%,var(--blue-600) 100%);font-family:inherit;color:#171717}
+.ag::before,.ag::after{content:"";position:absolute;border-radius:50%;pointer-events:none}
+.ag::before{width:520px;height:520px;right:-140px;top:-160px;border:1.5px solid color-mix(in srgb,var(--green-300) 28%,transparent);box-shadow:0 0 0 70px color-mix(in srgb,var(--green-300) 5%,transparent),0 0 0 140px color-mix(in srgb,var(--green-300) 4%,transparent)}
+.ag::after{width:420px;height:420px;left:-120px;bottom:-170px;background:radial-gradient(circle at 35% 35%,color-mix(in srgb,var(--green-500) 30%,transparent),color-mix(in srgb,var(--green-500) 6%,transparent) 65%,transparent 70%);border:1.5px solid color-mix(in srgb,var(--green-300) 25%,transparent)}
+.ag .ag-card{position:relative;z-index:1;max-height:calc(100vh - 40px);overflow:auto}
+.ag .ag-card{background:#fff;border-radius:20px;box-shadow:0 30px 80px rgba(0,16,60,.45);width:min(440px,100%);padding:28px 28px 24px;display:flex;flex-direction:column;gap:14px}
+.ag .ag-logo{height:44px;width:auto;align-self:flex-start}
+.ag h1{font-size:22px;font-weight:800;color:var(--blue-900);margin:0;letter-spacing:-.01em}
+.ag p{margin:0;font-size:14px;color:#404040;line-height:1.45}
+.ag form{display:flex;flex-direction:column;gap:12px}
+.ag label{font-size:13px;font-weight:700;color:var(--blue-900);display:flex;flex-direction:column;gap:5px}
+.ag input{font:inherit;font-size:15px;border:1.5px solid var(--blue-300);border-radius:10px;padding:11px 12px;width:100%;box-sizing:border-box;background:#fff}
+.ag input:focus{outline:3px solid var(--blue-600);outline-offset:1px;border-color:var(--blue-600)}
+.ag .ag-code{letter-spacing:.5em;text-align:center;font-size:22px;font-weight:700}
+.ag button.ag-btn{font:inherit;font-weight:700;font-size:15px;border:0;border-radius:999px;padding:12px 18px;background:var(--blue-700);color:#fff;cursor:pointer}
+.ag button.ag-btn:disabled{opacity:.55;cursor:default}
+.ag button.ag-link{font:inherit;font-size:13px;background:none;border:0;color:var(--blue-600);cursor:pointer;padding:4px;text-decoration:underline;align-self:center}
+.ag .ag-err{background:#FDECEA;color:#8a2b0f;border-radius:10px;padding:9px 12px;font-size:13.5px;font-weight:600}
+.ag .ag-info{background:var(--blue-100);color:var(--blue-700);border-radius:10px;padding:9px 12px;font-size:13.5px}
+.ag .ag-qr{display:flex;justify-content:center}
+.ag .ag-qr img{width:176px;height:176px;border:1px solid var(--blue-200);border-radius:12px;padding:6px}
+.ag code{display:block;word-break:break-all;background:var(--blue-50);border:1px dashed var(--blue-300);border-radius:8px;padding:8px 10px;font-size:13px;text-align:center;user-select:all}
+.ag ul{margin:0;padding-left:18px;font-size:13px;color:#404040}
+.ag .ag-small{font-size:12.5px;color:#737373;text-align:center}
+.ag-chip{position:relative;flex:none}
+.ag-chip>button{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--blue-300);background:#fff;color:var(--blue-700);font:inherit;font-weight:800;font-size:13px;cursor:pointer}
+.ag-chip>button:hover{background:var(--blue-50)}
+.ag-menu{position:absolute;right:0;top:calc(100% + 6px);z-index:120;min-width:220px;background:#fff;border:1px solid var(--blue-200);border-radius:12px;box-shadow:0 6px 18px rgba(var(--rgb),.18);padding:8px;display:flex;flex-direction:column;gap:2px}
+.ag-menu .who{padding:8px 10px 10px;border-bottom:1px solid var(--blue-100);margin-bottom:4px}
+.ag-menu .who b{display:block;font-size:14px;color:var(--blue-900)}
+.ag-menu .who span{font-size:12px;color:#737373;text-transform:capitalize}
+.ag-menu button{font:inherit;font-size:13.5px;text-align:left;background:none;border:0;border-radius:8px;padding:8px 10px;cursor:pointer;color:#171717}
+.ag-menu button:hover{background:var(--blue-50)}
+
+.ag-policy{max-height:210px;overflow:auto;text-align:left;border:1px solid var(--blue-100,#e5e5e5);border-radius:10px;padding:10px 14px;margin:10px 0;font-size:12.5px;line-height:1.45;background:#f8fbff}
+.ag-policy h2{font-size:14px;margin:0 0 6px}
+.ag-policy h3{font-size:12.5px;margin:10px 0 3px}
+.ag-policy p,.ag-policy ul{margin:0 0 6px}
+.ag-policy ul{padding-left:18px}
+.ag-card label.ag-agree{display:flex;flex-direction:row;align-items:flex-start;gap:8px;font-size:13px;font-weight:600;margin-bottom:10px}
+.ag-card label.ag-agree input{width:auto;margin-top:2px}
+.ag .ag-pw{position:relative;display:block}
+.ag .ag-pw input{padding-right:64px}
+.ag button.ag-eye{position:absolute;right:8px;top:50%;transform:translateY(-50%);font:inherit;font-size:12.5px;font-weight:700;color:var(--blue-700);background:none;border:0;border-radius:8px;padding:6px 8px;cursor:pointer}
+.ag button.ag-eye:hover{background:var(--blue-50)}

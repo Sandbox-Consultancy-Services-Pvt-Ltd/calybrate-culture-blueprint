@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+.vercel/
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# Old local config from the previous static app (holds keys): safe to delete, kept ignored just in case
+src/config.js
+
+# Supabase CLI local state and data backups (backups hold real business content)
+supabase/.temp/
+supabase/.branches/
+supabase/backups/
+
+# Logs & coverage
+*.log
+coverage/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Local assistant tooling
+.claude/
