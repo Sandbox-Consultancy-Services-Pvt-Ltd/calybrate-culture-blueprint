@@ -8,6 +8,8 @@ export default tseslint.config(
   js.configs.recommended,
   ...tseslint.configs.recommended,
   { files: ['e2e/**/*.mjs'], languageOptions: { globals: globals.node } },
+  // Node script that also runs small snippets inside the page it screenshots.
+  { files: ['scripts/**/*.mjs'], languageOptions: { globals: { ...globals.node, ...globals.browser } } },
   {
     files: ['**/*.{ts,tsx}'],
     languageOptions: { globals: globals.browser },

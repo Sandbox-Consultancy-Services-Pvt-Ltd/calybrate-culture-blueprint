@@ -53,7 +53,7 @@ With no database settings the app runs in an **offline mode**: everything is edi
 | Email | `angelo@sandbox.lk` |
 | Password | `Sandbox@123` |
 
-> **The test login is for demos and testing only.** The check happens in the browser and the details are in the page source, so it is not security. It switches itself off as soon as Supabase is configured, and you can turn it off with `VITE_TEST_LOGIN=0`. A **production build never runs offline**: without Supabase settings it shows a "Not set up yet" screen and nothing else.
+> **The test login is for demos and testing only.** The check happens in the browser and the details are in the page source, so it is not security. It switches itself off as soon as Supabase is configured. A deployment (for example on Vercel) with no Supabase settings also runs this way, so you can test it online; it holds no real data because there is no database behind it. To make a production build refuse to open without Supabase ("Not set up yet"), set `VITE_TEST_LOGIN=0`.
 
 To use the real sign-in (username, password and authenticator code), copy `app/.env.example` to `app/.env.local` and fill in the Supabase URL and the anon key (never the service-role key).
 
@@ -106,7 +106,7 @@ Vercel project settings (Settings > Build & Development / Git / Environment Vari
 | Output Directory | `dist` (the default) |
 | Environment variables | `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY` (anon key only), `VITE_ADMIN_FUNCTION` (the deployed function name; default `admin-users`); optional `VITE_USER_DOMAIN`, `VITE_IDLE_MINUTES` |
 
-If the site shows **"Not set up yet"**, the Supabase variables are missing for that environment: add them (Production, and Preview if used) and redeploy. Full steps: [docs/deployment.md](docs/deployment.md).
+If the site shows **"Not set up yet"**, the Supabase variables are missing and `VITE_TEST_LOGIN=0` is set: add the variables (Production, and Preview if used) and redeploy. With no Supabase variables and the test login on, the site runs the offline test copy instead. Full steps: [docs/deployment.md](docs/deployment.md).
 
 ## More
 
